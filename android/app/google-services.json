@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "317096061839",
+    "project_id": "erpsystem-c853f",
+    "storage_bucket": "erpsystem-c853f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317096061839:android:b5b74f17aa7fe2b67179fa",
+        "android_client_info": {
+          "package_name": "com.sqlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317096061839-gns8hjrrr6aco8c5qb7234s7bqfte070.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1N3hkXrny8kUuf6GcQXgt4MezpQpTWR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317096061839-gns8hjrrr6aco8c5qb7234s7bqfte070.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
