@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, View,FlatList,ScrollView } from 'react-native'
 import React, { useState,useContext } from 'react'
 import firestore from "@react-native-firebase/firestore"
-import { Context } from '../Context'
+import { Context } from '../../Context'
 
 
 const Admin = () => {

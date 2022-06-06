@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import Nav_stack from './Navigation/Nav_stack';
 import {DataProvider} from './Context';
 
+
 const App = () => {
   return (
     <DataProvider>
