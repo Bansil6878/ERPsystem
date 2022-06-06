@@ -29,7 +29,7 @@ const Login = () => {
       return navigation.navigate('Supersaler');
     }
     if (value == 'Delar' && password == 'Delar') {
-      return navigation.navigate('Delar');
+      return navigation.navigate('Delar_register');
     }
     if (value == 'Retailer' && password == 'Retailer') {
       return navigation.navigate('Retailer');

@@ -5,23 +5,32 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
+  ScrollView
 } from 'react-native';
 import React from 'react';
 import medicine from '../../assest/Data';
+import { useNavigation } from '@react-navigation/native';
 
 const Supersaler = () => {
+ 
+  const navigation=useNavigation();
+ 
   return (
     <>
+  <ScrollView>
       <View>
+        <Text style={{fontSize:20,fontWeight:'bold',marginLeft:10}}>Product List</Text>
         <FlatList
           data={medicine}
           renderItem={({item}) => {
             return (
+              
+              
               <View
-                style={{
-                  flexDirection: 'row',
-                  backgroundColor: '#fff',
-                  marginVertical: 9,
+              style={{
+                flexDirection: 'row',
+                backgroundColor: '#fff',
+                marginVertical: 9,
                   borderRadius: 10,
                   padding: 12,
                   marginHorizontal: 15,
@@ -35,9 +44,9 @@ const Supersaler = () => {
                   elevation: 5,
                   padding: 10,
                 }}>
-                <TouchableOpacity>
+                  
                   <Image source={item.image} style={styles.imgStyle} />
-                </TouchableOpacity>
+                
 
                 <View
                   style={{
@@ -64,22 +73,24 @@ const Supersaler = () => {
                     Total Price ₹: {item.totalprice}
                   </Text>
                   <Text style={styles.textStyle}>Ratings: {item.star}</Text>
+                  <Text onPress={()=>navigation.navigate('Product_details',{item:item})} style={styles.btn}>See more!</Text>
                 </View>
               </View>
             );
           }}
         />
-      </View>
 
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-around',
-          marginTop: 600,
         }}>
+          <Text style={styles.btnReq} onPress={()=>navigation.navigate('Show_request')}>Show Request</Text>
         <Text style={styles.btnBuy}>Buy</Text>
         <Text style={styles.btnSell}>Sell</Text>
       </View>
+          </View>
+  </ScrollView>
     </>
   );
 };
@@ -108,32 +119,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
   },
-  btnBuy: {
-    width: 100,
-    height: 50,
-    margin: 10,
-    borderColor: 'purple',
-    textAlign: 'center',
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    color: 'white',
-    backgroundColor: 'purple',
-    marginTop: 30,
-  },
-  btnSell: {
-    width: 100,
-    height: 50,
-    margin: 10,
-    borderColor: 'blue',
-    textAlign: 'center',
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    color: 'white',
-    backgroundColor: 'blue',
-    marginTop: 30,
-  },
+
   txt: {
     fontSize: 30,
     margin: 10,
@@ -157,4 +143,44 @@ const styles = StyleSheet.create({
     height: 130,
     borderRadius: 10,
   },
+  btnBuy: {
+    width: 100,
+    height: 60,
+    margin: 10,
+    borderColor: 'purple',
+    textAlign: 'center',
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    color: 'white',
+    backgroundColor: 'purple',
+    marginTop:30
+  },
+  btnSell: {
+    width: 80,
+    height: 60,
+    margin: 10,
+    borderColor: 'purple',
+    textAlign: 'center',
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    color: 'white',
+    backgroundColor: 'purple',
+    marginTop:30
+  },
+  btnReq: {
+    width: 80,
+    height: 60,
+    margin: 10,
+    borderColor: 'purple',
+    textAlign: 'center',
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
+    color: 'white',
+    backgroundColor: 'green',
+    marginTop:30
+  },
+  
 });
